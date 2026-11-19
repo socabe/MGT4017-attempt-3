@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mindful Meditation — yoga, meditation and wellbeing.">
+  <title>Mindful Meditation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <button class="menu-button" id="menuButton" aria-label="Open menu" aria-expanded="false">☰</button>
+    <a class="logo" href="#home">LOGO</a>
+    <nav class="account-nav" id="accountNav" aria-label="Account navigation">
+      <a href="#login" data-open-modal="login">Log in</a>
+      <a href="#signup" data-open-modal="signup">Sign up</a>
+    </nav>
+    <a class="work-link" href="#support">Work with us</a>
+    <form class="search-form" id="searchForm" role="search">
+      <input id="searchInput" type="search" placeholder="Search" aria-label="Search this website">
+      <button type="submit" aria-label="Search">⌕</button>
+    </form>
+    <button class="profile-button" id="profileButton" aria-label="Open account">♙</button>
+  </header>
+
+  <main id="home">
+    <div class="page-layout">
+      <aside class="left-column">
+        <a class="side-heading" href="#plans">Subscription plans</a>
+        <a class="side-subheading" href="#socials">socials</a>
+        <a class="about-link" href="#about">About us</a>
+      </aside>
+
+      <section class="main-column" aria-label="Featured content">
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1400&q=85" alt="Peaceful meditation practice">
+        </div>
+        <h1 class="recommendations-title">Recommendations</h1>
+        <div class="recommendations-grid">
+          <article class="recommendation-card">
+            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=900&q=85" alt="Yoga practice in a calm studio">
+            <h2>Yoga sessions</h2>
+            <p>Explore welcoming group classes and personalised one-to-one yoga.</p>
+            <a href="#sessions">Explore sessions</a>
+          </article>
+          <article class="recommendation-card">
+            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=85" alt="Morning yoga and stretching">
+            <h2>Meditation & mindfulness</h2>
+            <p>Find time to relax, recharge and build a mindful routine.</p>
+            <a href="#sessions">Find out more</a>
+          </article>
+        </div>
+      </section>
+
+      <aside class="right-column">
+        <a class="calendar-heading" href="#calendar">Calendar</a>
+        <div class="calendar-widget" id="calendar">
+          <div class="calendar-controls">
+            <button id="previousMonth" aria-label="Previous month">‹</button>
+            <strong id="monthYear"></strong>
+            <button id="nextMonth" aria-label="Next month">›</button>
+          </div>
+          <div class="calendar-grid" id="calendarGrid"></div>
+        </div>
+      </aside>
+    </div>
+
+    <section class="about-section" id="about">
+      <h2>About us</h2>
+      <p>Welcome to Mindful Meditation, your online space for relaxation, mindfulness and wellbeing. Discover yoga and meditation sessions designed to help you feel your best.</p>
+    </section>
+
+    <section class="sessions-section" id="sessions">
+      <h2>Our sessions</h2>
+      <div class="session-list">
+        <article><h3>Group yoga</h3><p>Join friendly online classes and enjoy practising together.</p></article>
+        <article><h3>One-to-one yoga</h3><p>Receive personalised guidance tailored to your goals.</p></article>
+        <article><h3>Meditation</h3><p>Slow down, relax and make time for yourself.</p></article>
+      </div>
+    </section>
+
+    <section class="plans-section" id="plans">
+      <h2>Subscription plans</h2>
+      <div class="plan-list">
+        <article><h3>Monthly membership</h3><p class="price">£19.99 <span>/ month</span></p><p>Unlimited group yoga classes, guided meditation and online access.</p><a href="#signup" data-open-modal="signup">Choose monthly</a></article>
+        <article><h3>Yearly membership</h3><p class="price">£179.99 <span>/ year</span></p><p>Enjoy membership benefits, exclusive wellness content and priority booking.</p><a href="#signup" data-open-modal="signup">Choose yearly</a></article>
+      </div>
+    </section>
+
+    <section class="support-section" id="support">
+      <h2>Support</h2>
+      <p>Need help or have a question? We'd love to hear from you.</p>
+      <a href="mailto:hello@example.com">Contact us</a>
+    </section>
+  </main>
+
+  <footer id="socials">
+    <a href="#home">LOGO</a>
+    <p>Mindful Meditation · Find your balance. Find your peace.</p>
+    <div><a href="#about">About us</a><a href="#plans">Subscription plans</a><a href="#support">Support</a></div>
+    <small>© <span id="year"></span> Mindful Meditation. All rights reserved.</small>
+  </footer>
+
+  <dialog class="account-dialog" id="accountDialog">
+    <button class="dialog-close" id="closeDialog" aria-label="Close">×</button>
+    <h2 id="dialogHeading">Welcome</h2>
+    <p id="dialogMessage">Enter your details to continue.</p>
+    <form id="accountForm">
+      <label for="email">Email address</label>
+      <input id="email" type="email" placeholder="Email address" required>
+      <label for="password">Password</label>
+      <input id="password" type="password" placeholder="Password" minlength="6" required>
+      <button type="submit">Continue</button>
+    </form>
+    <small>This is a demonstration form. Account registration and payments are not connected.</small>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>

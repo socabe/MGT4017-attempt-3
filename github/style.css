@@ -1,0 +1,103 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --black: #111; --line: #222; --grey: #666; --white: #fff; }
+html { scroll-behavior: smooth; }
+body { font-family: Arial, Helvetica, sans-serif; color: var(--black); background: var(--white); line-height: 1.45; }
+a { color: inherit; text-decoration: none; }
+button, input { font: inherit; }
+.topbar { height: 46px; border: 1px solid var(--line); display: flex; align-items: center; gap: 26px; padding: 0 22px; background: #fff; position: relative; z-index: 5; }
+.menu-button, .profile-button, .search-form button { border: 0; background: transparent; color: #111; cursor: pointer; }
+.menu-button { font-size: 27px; line-height: 1; width: 32px; }
+.logo { font-size: 33px; line-height: 1; font-weight: 700; letter-spacing: -2px; white-space: nowrap; }
+.account-nav { display: flex; gap: 24px; margin-left: 8px; font-size: 20px; }
+.work-link { margin-left: auto; font-size: 19px; white-space: nowrap; }
+.search-form { display: flex; width: 224px; height: 29px; border: 1px solid #777; margin-left: 0; }
+.search-form input { width: 100%; min-width: 0; border: 0; outline: 0; padding: 4px 8px; font-size: 11px; }
+.search-form button { width: 30px; font-size: 23px; line-height: 1; }
+.profile-button { font-size: 26px; margin-left: 22px; }
+.page-layout { display: grid; grid-template-columns: minmax(210px, 26%) minmax(350px, 44%) minmax(160px, 1fr); column-gap: 18px; padding: 20px 2.4% 0; align-items: start; }
+.left-column { display: flex; flex-direction: column; align-items: flex-start; padding-top: 10px; }
+.side-heading { font-size: 22px; font-weight: 600; line-height: 1.2; }
+.side-subheading { font-size: 15px; margin-top: -1px; }
+.about-link { font-size: 30px; font-weight: 600; margin-top: 29px; }
+.main-column { min-width: 0; }
+.hero-image { width: 100%; height: 185px; border: 1px solid var(--line); overflow: hidden; }
+.hero-image img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.recommendations-title { font-size: 24px; font-weight: 600; margin-top: 17px; }
+.right-column { padding-top: 0; }
+.calendar-heading { font-size: 23px; font-weight: 600; }
+.calendar-widget { margin-top: 15px; width: 100%; max-width: 230px; display: none; }
+.calendar-controls { display: flex; align-items: center; justify-content: space-between; margin-bottom: 9px; }
+.calendar-controls button { border: 0; background: none; font-size: 22px; cursor: pointer; }
+.calendar-controls strong { font-size: 13px; }
+.calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); text-align: center; gap: 2px; }
+.calendar-grid span { padding: 4px 0; font-size: 11px; }
+.calendar-grid .weekday { font-weight: bold; color: var(--grey); }
+.calendar-grid .today { background: #111; color: #fff; border-radius: 50%; }
+.recommendations-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; width: calc(100% + 62%); margin-left: -62%; margin-top: 126px; align-items: start; }
+.recommendation-card { min-width: 0; }
+.recommendation-card img { display: block; width: 100%; height: 183px; object-fit: cover; border: 1px solid var(--line); }
+.recommendation-card h2 { font-size: 19px; margin: 10px 0 5px; }
+.recommendation-card p { color: #444; font-size: 14px; margin-bottom: 7px; }
+.recommendation-card a, .plan-list a, .support-section a { text-decoration: underline; font-size: 14px; }
+.about-section, .sessions-section, .plans-section, .support-section { padding: 55px 9%; }
+.about-section { max-width: 900px; }
+.about-section h2, .sessions-section h2, .plans-section h2, .support-section h2 { font-size: 27px; margin-bottom: 12px; }
+.about-section p { max-width: 680px; }
+.sessions-section { background: #fafafa; }
+.session-list, .plan-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+.session-list article, .plan-list article { border: 1px solid #bbb; padding: 22px; }
+.session-list h3, .plan-list h3 { font-size: 18px; margin-bottom: 8px; }
+.plan-list { grid-template-columns: repeat(2, minmax(0, 330px)); }
+.price { font-size: 27px; font-weight: 700; margin: 10px 0; }
+.price span { font-size: 13px; font-weight: 400; }
+.plan-list a { display: inline-block; margin-top: 15px; }
+.support-section { text-align: center; padding-top: 15px; }
+.support-section p { margin-bottom: 8px; }
+footer { background: #fff; border-top: 1px solid #bbb; padding: 28px 15px; text-align: center; }
+footer > a { font-size: 25px; font-weight: 700; letter-spacing: -1px; }
+footer p { margin: 7px 0 12px; }
+footer div { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 15px; font-size: 13px; }
+footer small { color: #555; }
+.account-dialog { width: min(390px, calc(100% - 30px)); border: 1px solid #111; padding: 28px; margin: auto; }
+.account-dialog::backdrop { background: rgba(0,0,0,.45); }
+.dialog-close { float: right; border: 0; background: none; font-size: 27px; cursor: pointer; }
+.account-dialog h2 { font-size: 23px; margin-bottom: 6px; }
+#accountForm { display: grid; gap: 8px; margin: 18px 0; }
+#accountForm input { border: 1px solid #999; padding: 10px; }
+#accountForm button { border: 1px solid #111; background: #111; color: #fff; padding: 10px; cursor: pointer; }
+.account-dialog small { color: #555; font-size: 11px; }
+@media (max-width: 850px) {
+  .topbar { gap: 14px; padding: 0 12px; }
+  .logo { font-size: 28px; }
+  .account-nav { gap: 13px; font-size: 16px; }
+  .work-link { font-size: 15px; }
+  .search-form { width: 155px; }
+  .profile-button { margin-left: 3px; }
+  .page-layout { grid-template-columns: 190px minmax(0, 1fr); }
+  .right-column { grid-column: 1; grid-row: 2; margin-top: 20px; }
+  .main-column { grid-column: 2; grid-row: 1 / span 2; }
+  .recommendations-grid { width: 100%; margin: 55px 0 0; }
+  .calendar-widget { display: block; }
+}
+@media (max-width: 600px) {
+  .topbar { min-height: 52px; height: auto; flex-wrap: wrap; padding: 8px 12px; gap: 12px; }
+  .menu-button { width: 25px; }
+  .logo { font-size: 27px; }
+  .account-nav { order: 5; display: none; width: 100%; padding: 8px 0; }
+  .account-nav.open { display: flex; }
+  .work-link { margin-left: auto; font-size: 14px; }
+  .search-form { order: 6; width: calc(100% - 44px); }
+  .profile-button { margin-left: auto; }
+  .page-layout { display: flex; flex-direction: column; padding: 20px 18px 0; gap: 18px; }
+  .left-column { padding: 0; }
+  .about-link { margin-top: 10px; font-size: 25px; }
+  .main-column { width: 100%; }
+  .hero-image { height: 190px; }
+  .right-column { order: 3; width: 100%; }
+  .calendar-widget { display: block; }
+  .recommendations-grid { grid-template-columns: 1fr; gap: 24px; margin-top: 45px; }
+  .recommendation-card img { height: 190px; }
+  .about-section, .sessions-section, .plans-section, .support-section { padding: 38px 20px; }
+  .session-list, .plan-list { grid-template-columns: 1fr; }
+  .support-section { padding-top: 5px; }
+}
